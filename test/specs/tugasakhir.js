@@ -5,17 +5,17 @@ describe('User Open Application',() => {
     })
   })
   
-  describe('User Submit Form Data Application',() => {
-    it('User can input field name', async() => {
-        await $('[text="Name"]').setValue("Dava");
+  describe('User Fill Personal Info',() => {
+    it('User can input name', async() => {
+        await $('[id="com.fghilmany.dietmealapp:id/et_name"]').setValue("Dava");
     })
-    it('User can input field weight: 50', async() => {
-        await $('[text="Weight"]').setValue(50);
+    it('User can input weight: 50', async() => {
+        await $('[id="com.fghilmany.dietmealapp:id/et_weight"]').setValue(50);
     })
-    it('User can input field height: 165', async() => {
-        await $('[text="Height"]').setValue(158);
+    it('User can input height: 165', async() => {
+        await $('[id="com.fghilmany.dietmealapp:id/et_height"]').setValue(158);
     })
-    it('User can click choose option gender: Female', async() => {
+    it('User can choose gender: Female', async() => {
         await $('[id="com.fghilmany.dietmealapp:id/rb_female"]').click();
     })
     it('User can click button "NEXT"', async() => {
@@ -26,7 +26,7 @@ describe('User Open Application',() => {
   })
   
   describe('User Submit Form Activity',() => {
-    it('User can choose option aktivitas sehari-hari', async() => {
+    it('User can choose form "Aktivitas sehari-hari"', async() => {
         await $('[text="Sekolah, Kuliah, Kerja Kantor, dsj."]').click();
     })
     it('User can click button "SELESAI"', async() => {
